@@ -53,7 +53,7 @@ var helper_methods = (function(){
 	};
 
 	var parcels = {
-		max_parcels: function(number, min_value_parcel){
+		maxParcels: function(number, min_value_parcel){
 			var arr = [];
 			for (var i = 1; i <= 12; i++) {
 				if (number/i >= min_value_parcel) {
@@ -62,7 +62,7 @@ var helper_methods = (function(){
 			};
 			return arr[arr.length - 1];
 		},
-		result_parcels: function(number, min_value_parcel){
+		resultParcels: function(number, min_value_parcel){
 			var arr = [];
 			for (var i = 1; i <= 12; i++) {
 				if (number/i >= min_value_parcel) {
@@ -72,11 +72,11 @@ var helper_methods = (function(){
 			};
 			return arr;
 		},
-		formated_parcels: function(number, min_value_parcel){
+		formatedParcels: function(number, min_value_parcel){
 			var arr = [];
 			for (var i = 1; i <= 12; i++) {
 				if (number/i >= min_value_parcel) {
-					var result = formatNumber(number/i);
+					var result = helper_methods.number.formatNumber(number/i);
 					var string = i+'x de R$' + result;
 					arr.push(string);
 				};
