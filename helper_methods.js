@@ -68,7 +68,7 @@ var helper_methods = (function(){
 		},
 		moneyToFloat: function(element){
 			// Validate if argument is a string or a object
-			if (typeof element !== 'object' || typeof element === 'string') {
+			if (typeof element !== 'object' && typeof element !== 'string') {
 				throw "Received argument is not a 'object' or a 'string. Typeof argument: " + typeof element;
 			};
 
