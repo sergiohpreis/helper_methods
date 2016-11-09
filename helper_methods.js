@@ -12,6 +12,12 @@ var helper_methods = (function(){
 			var dbefore = number.toString().split('.')[0];
 			// dbfore get the digits after the decimal separator
 			var dafter = number.toString().split('.')[1];
+			
+			// Check if the number is a negative number
+			if (number.toString().split('.')[0].indexOf('-') != -1) {
+				dbefore = dbefore.replace('-','');
+			};
+
 			// Example: 15 > 15,00
 			if (dafter === undefined) {
 				dafter = '00';
@@ -50,7 +56,13 @@ var helper_methods = (function(){
 				// Example: 1.51 > 1,51
 				// Example: 15.15 > 15,15
 				// Example: 151.51 > 151,15
-				var string = dbefore+','+dafter;
+				
+				// Check if the number is a negative number
+				if (number.toString().split('.')[0].indexOf('-') != -1) {
+					var string = '-'+dbefore+','+dafter;
+				} else {
+					var string = dbefore+','+dafter;
+				};
 			};
 			return string;
 		},
