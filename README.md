@@ -16,7 +16,7 @@ Type: `number`.
    
 Transform a number on a formatted number.  
 
-*number:* Number to format, need to be `typeof number`. 
+**number:** Number to format, need to be `typeof number`. 
 
 Example:
 
@@ -30,7 +30,7 @@ Type: `string` or `object`.
    
 Transform a string or object that contains a string with money on float number.
 
-*money:* Money to format, need to be `typeof string` or `typeof object`.
+**money:** Money to format, need to be `typeof string` or `typeof object`.
 
 Example: 
 ```html
@@ -54,8 +54,8 @@ Type: `number`.
    
 Return the max number of parcels based on a minimal parcel value.
 
-*number*: Number to parcel, need to be `typeof number`.  
-*minValueParcel*: Minimal value of the parcel, need to be `typeof number`.
+**number**: Number to parcel, need to be `typeof number`.  
+**minValueParcel**: Minimal value of the parcel, need to be `typeof number`.
 
 ```javascript
 helper_methods.parcels.maxParcels(50, 5);
@@ -67,8 +67,8 @@ Type: `number`.
    
 Return an array with the parcel values
 
-*number*: Number to parcel, need to be `typeof number`.  
-*minValueParcel*: Minimal value of the parcel, need to be `typeof number`.
+**number**: Number to parcel, need to be `typeof number`.  
+**minValueParcel**: Minimal value of the parcel, need to be `typeof number`.
 
 ```javascript
 helper_methods.parcels.resultParcels(50, 5);
@@ -80,9 +80,9 @@ Type: `number`.
    
 Return an array with the parcel values on a formated string.
 
-*number*: Number to parcel, need to be `typeof number`.  
-*minValueParcel*: Minimal value of the parcel, need to be `typeof number`.  
-*text*: String that contains the custom text to return on array. Use `$1` to parcel and `$2` to value
+**number**: Number to parcel, need to be `typeof number`.  
+**minValueParcel**: Minimal value of the parcel, need to be `typeof number`.  
+**text**: String that contains the custom text to return on array. Use `$1` to parcel and `$2` to value
 
 ```javascript
 helper_methods.parcels.formatedParcels(50, 5);
