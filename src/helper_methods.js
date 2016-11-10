@@ -115,12 +115,20 @@ var helper_methods = (function(){
 			// Same logic of maxParcels but returns the results of the division
 			return arr;
 		},
-		formatedParcels: function(number, min_value_parcel){
+		formatedParcels: function(number, min_value_parcel, text){
+			if (text && (text.indexOf('$1') === -1 || text.indexOf('$2') === -1)) {
+				throw "Please use $1 to inform parcels and $2 to inform value";
+			};
+
 			var arr = [];
 			for (var i = 1; i <= 12; i++) {
 				if (number/i >= min_value_parcel) {
 					var result = helper_methods.number.formatNumber(number/i);
-					var string = i+'x de R$' + result;
+					if (text) {
+						var string = text.replace('$1', i+'x').replace('$2', 'R$' + result);
+					} else {
+						var string = i+'x de R$' + result;
+					};
 					arr.push(string);
 				};
 			};
